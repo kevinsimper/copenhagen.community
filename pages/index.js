@@ -1,5 +1,6 @@
 import { meetups } from "./meetups";
 import Head from "next/head";
+import events from "../events.json";
 
 const images = [
   "https://images.unsplash.com/photo-1526056316312-ed419ce34a05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=235a8dea6dc46624996665b953e152f6&auto=format&fit=crop&w=800&q=60",
@@ -12,6 +13,22 @@ const images = [
 const colors = ["#f2849e", "#7ecaf6", "#7bd0c1", "#c75b9b", "#ae85ca"];
 
 export default () => {
+  let all = events
+    .map(d => {
+      // console.log(d[0]);
+      return d[1][2].slice(1).map(event => {
+        // console.log(event);
+        const start = event[1][1][3];
+        const end = event[1][2][3];
+        const title = event[1][4][3];
+        const url = event[1][10][3];
+        return { start, end, title, url };
+      });
+    })
+    .reduce((acc, val) => acc.concat(val), [])
+    .sort((a, b) => {
+      return new Date(a.start).getTime() - new Date(b.start).getTime();
+    });
   return (
     <div>
       <Head>
@@ -27,6 +44,9 @@ export default () => {
         }
         *, *:before, *:after {
           box-sizing: border-box;
+        }
+        table {
+            border-collapse: collapse;
         }
         `}</style>
       <style jsx>{`
@@ -106,6 +126,29 @@ export default () => {
           text-align: center;
           width: 100%;
         }
+        .table {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 1rem;
+        }
+        .table td,
+        .table th {
+          padding: 0.75rem;
+          vertical-align: top;
+          border-top: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+          vertical-align: bottom;
+          border-bottom: 2px solid #dee2e6;
+        }
+
+        .table tbody + tbody {
+          border-top: 2px solid #dee2e6;
+        }
+        .table tbody tr:hover {
+          background-color: rgba(0, 0, 0, 0.075);
+        }
       `}</style>
       <div className="bg">
         <h1>Copenhagen.community</h1>
@@ -133,6 +176,27 @@ export default () => {
             );
           })}
         </div>
+        <div className="upcoming">
+          <h1>Upcoming meetups</h1>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Start</th>
+                <th>Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              {all.map(({ start, title, url }) => (
+                <tr>
+                  <td>{start}</td>
+                  <td>
+                    <a href={url}>{title}</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>
           <p>
@@ -143,6 +207,12 @@ export default () => {
       </div>
       <style jsx>
         {`
+          .upcoming {
+            margin: 40px auto 0;
+          }
+          .upcoming h1 {
+            text-align: center;
+          }
           .whatis {
             margin: 40px auto 0;
             max-width: 500px;
