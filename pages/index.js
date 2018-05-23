@@ -1,3 +1,4 @@
+import { meetups } from "./meetups";
 import Head from "next/head";
 
 const images = [
@@ -9,17 +10,6 @@ const images = [
 ];
 
 const colors = ["#f2849e", "#7ecaf6", "#7bd0c1", "#c75b9b", "#ae85ca"];
-
-const meetups = [
-  ["CopenhagenJS", "https://copenhagenjs.dk"],
-  ["ngCopenhagen", "https://www.meetup.com/ngCopenhagen/"],
-  ["GDG", "https://www.meetup.com/GDG-Copenhagen/"],
-  [
-    "GDG Cloud",
-    "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/"
-  ],
-  ["Docker Copenhagen", "https://www.meetup.com/Docker-Copenhagen/"]
-];
 
 export default () => {
   return (
