@@ -1,0 +1,22 @@
+{
+  "name": "copenhagen.community",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "next",
+    "build": "next build && next export",
+    "deploy": "npm run build && surge out copenhagen.community",
+    "watch": "npx onchange '**/*.js' -- prettier --write {{changed}}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^6.0.3",
+    "prettier": "^1.12.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
