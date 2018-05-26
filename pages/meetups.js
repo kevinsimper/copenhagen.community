@@ -11,6 +11,16 @@ const meetups = [
     "Docker Copenhagen",
     "https://www.meetup.com/Docker-Copenhagen/",
     "Docker-Copenhagen"
+  ],
+  [
+    "AI Copenhagen",
+    "https://www.meetup.com/aicopenhagen/",
+    "aicopenhagen"
+  ],
+  [
+    "DroidDevs CPH",
+    "https://www.meetup.com/DroidDevs-CPH/",
+    "DroidDevs-CPH"
   ]
 ];
 exports.meetups = meetups;
