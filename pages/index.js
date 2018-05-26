@@ -192,7 +192,7 @@ export default () => {
             <tbody>
               {all.map(({ start, title, group, url }, key) => (
                 <tr key={key}>
-                  <td>{start}</td>
+                  <td>{start.split('T').join(' - ')}</td>
                   <td>{group}</td>
                   <td>
                     <a href={url}>{title}</a>
