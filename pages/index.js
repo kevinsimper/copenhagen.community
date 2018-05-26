@@ -17,14 +17,14 @@ const colors = ["#f2849e", "#7ecaf6", "#7bd0c1", "#c75b9b", "#ae85ca", "#8bc34a"
 export default () => {
   let all = events
     .map(d => {
-      // console.log(d[0]);
       return d[1][2].slice(1).map(event => {
         // console.log(event);
         const start = event[1][1][3];
         const end = event[1][2][3];
         const title = event[1][4][3];
         const url = event[1][10][3];
-        return { start, end, title, url };
+        const group = d[0]
+        return { start, end, title, url, group };
       });
     })
     .reduce((acc, val) => acc.concat(val), [])
@@ -184,13 +184,15 @@ export default () => {
             <thead>
               <tr>
                 <th>Start</th>
+                <th>Group</th>
                 <th>Event</th>
               </tr>
             </thead>
             <tbody>
-              {all.map(({ start, title, url }) => (
-                <tr>
+              {all.map(({ start, title, group, url }, key) => (
+                <tr key={key}>
                   <td>{start}</td>
+                  <td>{group}</td>
                   <td>
                     <a href={url}>{title}</a>
                   </td>
