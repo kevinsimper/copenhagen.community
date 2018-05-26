@@ -12,16 +12,8 @@ const meetups = [
     "https://www.meetup.com/Docker-Copenhagen/",
     "Docker-Copenhagen"
   ],
-  [
-    "AI Copenhagen",
-    "https://www.meetup.com/aicopenhagen/",
-    "aicopenhagen"
-  ],
-  [
-    "DroidDevs CPH",
-    "https://www.meetup.com/DroidDevs-CPH/",
-    "DroidDevs-CPH"
-  ],
+  ["AI Copenhagen", "https://www.meetup.com/aicopenhagen/", "aicopenhagen"],
+  ["DroidDevs CPH", "https://www.meetup.com/DroidDevs-CPH/", "DroidDevs-CPH"],
   [
     "React Native CPH",
     "https://www.meetup.com/React-Native-CPH/",

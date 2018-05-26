@@ -13,7 +13,16 @@ const images = [
   "https://images.unsplash.com/photo-1515749968044-d1d417bf629c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ba0724278aad6ee5e0e68f58c3178c7&auto=format&fit=crop&w=800&q=60"
 ];
 
-const colors = ["#f2849e", "#7ecaf6", "#7bd0c1", "#c75b9b", "#ae85ca", "#8bc34a", "#ff5722", "#ffc107"];
+const colors = [
+  "#f2849e",
+  "#7ecaf6",
+  "#7bd0c1",
+  "#c75b9b",
+  "#ae85ca",
+  "#8bc34a",
+  "#ff5722",
+  "#ffc107"
+];
 
 export default () => {
   let all = events
@@ -24,7 +33,7 @@ export default () => {
         const end = event[1][2][3];
         const title = event[1][4][3];
         const url = event[1][10][3];
-        const group = d[0]
+        const group = d[0];
         return { start, end, title, url, group };
       });
     })
@@ -192,7 +201,7 @@ export default () => {
             <tbody>
               {all.map(({ start, title, group, url }, key) => (
                 <tr key={key}>
-                  <td>{start.split('T').join(' - ')}</td>
+                  <td>{start.split("T").join(" - ")}</td>
                   <td>{group}</td>
                   <td>
                     <a href={url}>{title}</a>
