@@ -9,10 +9,11 @@ const images = [
   "https://images.unsplash.com/photo-1519143587129-d7ae992bc44c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=41cb269cddd7dbd66a0b85266f65a5c2&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1515838574152-6d83f6064351?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0afc73577781479d65292c6eef5190a0&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1467627003363-f047333cbf44?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e32cc6ee7556cbea77946138ae543ee2&auto=format&fit=crop&w=800&q=60",
-  "https://images.unsplash.com/photo-1524555197196-a7ef01c3c9d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a0a76e469be273a15f17ba96c225909&auto=format&fit=crop&w=800&q=60"
+  "https://images.unsplash.com/photo-1524555197196-a7ef01c3c9d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a0a76e469be273a15f17ba96c225909&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1515749968044-d1d417bf629c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ba0724278aad6ee5e0e68f58c3178c7&auto=format&fit=crop&w=800&q=60"
 ];
 
-const colors = ["#f2849e", "#7ecaf6", "#7bd0c1", "#c75b9b", "#ae85ca", "#8bc34a", "#ff5722"];
+const colors = ["#f2849e", "#7ecaf6", "#7bd0c1", "#c75b9b", "#ae85ca", "#8bc34a", "#ff5722", "#ffc107"];
 
 export default () => {
   let all = events

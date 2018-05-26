@@ -21,6 +21,11 @@ const meetups = [
     "DroidDevs CPH",
     "https://www.meetup.com/DroidDevs-CPH/",
     "DroidDevs-CPH"
+  ],
+  [
+    "React Native CPH",
+    "https://www.meetup.com/React-Native-CPH/",
+    "React-Native-CPH"
   ]
 ];
 exports.meetups = meetups;
