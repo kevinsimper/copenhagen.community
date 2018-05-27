@@ -218,6 +218,16 @@ export default () => {
             making Copenhagen a great community!
           </p>
         </div>
+        <div className="whatis github">
+          <h2>Find it on Github</h2>
+          <p>
+            You are very welcome to look at the code and make a pull request
+            with changes.
+            <a href="https://github.com/kevinsimper/copenhagen.community">
+              https://github.com/kevinsimper/copenhagen.community
+            </a>
+          </p>
+        </div>
       </div>
       <style jsx>
         {`

@@ -6,8 +6,9 @@
   "scripts": {
     "start": "next",
     "build": "next build && next export",
-    "deploy": "npm run build && surge out copenhagen.community",
+    "deploy": "npm run build && npx surge out copenhagen.community",
     "watch": "npx onchange '**/*.js' -- prettier --write {{changed}}",
+    "fix-lint": "prettier --write 'pages/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
