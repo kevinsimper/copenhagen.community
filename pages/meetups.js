@@ -18,6 +18,21 @@ const meetups = [
     "React Native CPH",
     "https://www.meetup.com/React-Native-CPH/",
     "React-Native-CPH"
+  ],
+  [
+    "Copenhagen Ruby Brigade",
+    "https://www.meetup.com/Copenhagen-Ruby-Brigade/",
+    "Copenhagen-Ruby-Brigade"
+  ],
+  [
+    "Rails Girls Copenhagen",
+    "https://www.meetup.com/Rails-Girls-Copenhagen/",
+    "Rails-Girls-Copenhagen"
+  ],
+  [
+    "CPH Tech Books & Film",
+    "https://www.facebook.com/groups/1967244536931015/",
+    ""
   ]
 ];
 exports.meetups = meetups;
