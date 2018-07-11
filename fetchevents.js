@@ -4,7 +4,7 @@ const icalparser = require("ical.js");
 let responses = [];
 
 (async () => {
-  const icals = meetups.map(m => [
+  const icals = meetups.filter(m => m[2] !== "").map(m => [
     m[0],
     `https://www.meetup.com/${m[2]}/events/ical/`
   ]);
