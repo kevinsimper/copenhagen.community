@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default () => {
   return (
@@ -33,8 +33,8 @@ export default () => {
             font-size: 2rem;
           }
         }
-        `}</style>
+      `}</style>
       <h1>Copenhagen.community</h1>
     </div>
-  )
-}
+  );
+};

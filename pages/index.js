@@ -1,7 +1,7 @@
 import { meetups } from "./meetups";
 import Head from "next/head";
-import Upcoming from '../components/Upcoming'
-import ImageHeader from '../components/ImageHeader'
+import Upcoming from "../components/Upcoming";
+import ImageHeader from "../components/ImageHeader";
 
 const images = [
   "https://images.unsplash.com/photo-1526056316312-ed419ce34a05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=235a8dea6dc46624996665b953e152f6&auto=format&fit=crop&w=500&q=60",
@@ -110,7 +110,7 @@ export default () => {
           padding: 0 10px;
         }
       `}</style>
-      <ImageHeader/>
+      <ImageHeader />
       <div className="content">
         <div className="meetups">
           {meetups.map((meetup, key) => {
@@ -134,7 +134,7 @@ export default () => {
             );
           })}
         </div>
-        <Upcoming/>
+        <Upcoming />
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>
           <p>

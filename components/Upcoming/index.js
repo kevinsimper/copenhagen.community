@@ -1,35 +1,38 @@
-import React from 'react'
-import Table from '../Table'
+import React from "react";
+import Table from "../Table";
 
 class FetchEvents extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       loading: true,
       eventsData: []
-    }
+    };
   }
   componentDidMount() {
-    fetch('https://cphcomevents.storage.googleapis.com/events.json').then(r => r.json()).then(data => {
-      this.setState({
-        eventsData: data,
-        loading: false
-      })
-    })
+    fetch("https://cphcomevents.storage.googleapis.com/events.json")
+      .then(r => r.json())
+      .then(data => {
+        this.setState({
+          eventsData: data,
+          loading: false
+        });
+      });
   }
   parseIcal(data) {
-    return data.map(d => {
-      return d[1][2].slice(1).map(event => {
-        // console.log(event);
-        const start = event[1][1][3];
-        const end = event[1][2][3];
-        const title = event[1][4][3];
-        const url = event[1][9][3];
-        const group = d[0];
-        return { start, end, title, url, group };
-      });
-    })
-    .reduce((acc, val) => acc.concat(val), [])
+    return data
+      .map(d => {
+        return d[1][2].slice(1).map(event => {
+          // console.log(event);
+          const start = event[1][1][3];
+          const end = event[1][2][3];
+          const title = event[1][4][3];
+          const url = event[1][9][3];
+          const group = d[0];
+          return { start, end, title, url, group };
+        });
+      })
+      .reduce((acc, val) => acc.concat(val), []);
   }
   sortByTime(data) {
     return data.sort((a, b) => {
@@ -37,16 +40,16 @@ class FetchEvents extends React.Component {
     });
   }
   render() {
-    if(this.state.loading) {
-      return <div>Loading...</div>
+    if (this.state.loading) {
+      return <div>Loading...</div>;
     }
-    const { render } = this.props
-    let filtered = this.sortByTime(this.parseIcal(this.state.eventsData))
-    return render(filtered)
+    const { render } = this.props;
+    let filtered = this.sortByTime(this.parseIcal(this.state.eventsData));
+    return render(filtered);
   }
 }
 
-export default ({events}) => {
+export default ({ events }) => {
   return (
     <div className="upcoming">
       <style jsx>
@@ -69,19 +72,21 @@ export default ({events}) => {
           </tr>
         </thead>
         <tbody>
-          <FetchEvents render={filtered => {
-            return filtered.map(({ start, title, group, url }, key) => (
-              <tr key={key}>
-                <td>{start.split("T").join(" - ")}</td>
-                <td>{group}</td>
-                <td>
-                  <a href={url}>{title}</a>
-                </td>
-              </tr>
-            ))
-          }}/>
+          <FetchEvents
+            render={filtered => {
+              return filtered.map(({ start, title, group, url }, key) => (
+                <tr key={key}>
+                  <td>{start.split("T").join(" - ")}</td>
+                  <td>{group}</td>
+                  <td>
+                    <a href={url}>{title}</a>
+                  </td>
+                </tr>
+              ));
+            }}
+          />
         </tbody>
       </Table>
     </div>
-  )
-}
+  );
+};

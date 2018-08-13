@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default ({children}) => {
+export default ({ children }) => {
   return (
     <div>
-
-    <style>{`
+      <style>{`
       .table {
         width: 100%;
         max-width: 100%;
@@ -29,9 +28,7 @@ export default ({children}) => {
         background-color: rgba(0, 0, 0, 0.075);
       }
     `}</style>
-    <table className="table">
-      {children}
-    </table>
-  </div>
-  )
-}
+      <table className="table">{children}</table>
+    </div>
+  );
+};
