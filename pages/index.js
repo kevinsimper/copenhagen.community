@@ -1,6 +1,5 @@
 import { meetups } from "./meetups";
 import Head from "next/head";
-import events from "../events.json";
 import Upcoming from '../components/Upcoming'
 import ImageHeader from '../components/ImageHeader'
 
@@ -33,22 +32,6 @@ const colors = [
 ];
 
 export default () => {
-  let all = events
-    .map(d => {
-      return d[1][2].slice(1).map(event => {
-        // console.log(event);
-        const start = event[1][1][3];
-        const end = event[1][2][3];
-        const title = event[1][4][3];
-        const url = event[1][9][3];
-        const group = d[0];
-        return { start, end, title, url, group };
-      });
-    })
-    .reduce((acc, val) => acc.concat(val), [])
-    .sort((a, b) => {
-      return new Date(a.start).getTime() - new Date(b.start).getTime();
-    });
   return (
     <div>
       <Head>
@@ -151,7 +134,7 @@ export default () => {
             );
           })}
         </div>
-        <Upcoming events={all}/>
+        <Upcoming/>
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>
           <p>
