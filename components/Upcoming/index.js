@@ -1,8 +1,22 @@
 import React from 'react'
 import Table from '../Table'
-import EventData from '../../events.json'
 
 class FetchEvents extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      loading: true,
+      eventsData: []
+    }
+  }
+  componentDidMount() {
+    fetch('https://cphcomevents.storage.googleapis.com/events.json').then(r => r.json()).then(data => {
+      this.setState({
+        eventsData: data,
+        loading: false
+      })
+    })
+  }
   parseIcal(data) {
     return data.map(d => {
       return d[1][2].slice(1).map(event => {
@@ -23,8 +37,11 @@ class FetchEvents extends React.Component {
     });
   }
   render() {
+    if(this.state.loading) {
+      return <div>Loading...</div>
+    }
     const { render } = this.props
-    let filtered = this.sortByTime(this.parseIcal(EventData))
+    let filtered = this.sortByTime(this.parseIcal(this.state.eventsData))
     return render(filtered)
   }
 }
