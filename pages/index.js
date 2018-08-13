@@ -1,6 +1,7 @@
 import { meetups } from "./meetups";
 import Head from "next/head";
 import events from "../events.json";
+import Upcoming from '../components/Upcoming'
 
 const images = [
   "https://images.unsplash.com/photo-1526056316312-ed419ce34a05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=235a8dea6dc46624996665b953e152f6&auto=format&fit=crop&w=500&q=60",
@@ -153,29 +154,6 @@ export default () => {
           width: 100%;
           padding: 0 10px;
         }
-        .table {
-          width: 100%;
-          max-width: 100%;
-          margin-bottom: 1rem;
-        }
-        .table td,
-        .table th {
-          padding: 0.75rem;
-          vertical-align: top;
-          border-top: 1px solid #dee2e6;
-        }
-
-        .table thead th {
-          vertical-align: bottom;
-          border-bottom: 2px solid #dee2e6;
-        }
-
-        .table tbody + tbody {
-          border-top: 2px solid #dee2e6;
-        }
-        .table tbody tr:hover {
-          background-color: rgba(0, 0, 0, 0.075);
-        }
       `}</style>
       <div className="bg">
         <h1>Copenhagen.community</h1>
@@ -203,29 +181,7 @@ export default () => {
             );
           })}
         </div>
-        <div className="upcoming">
-          <h1>Upcoming meetups</h1>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Start</th>
-                <th>Group</th>
-                <th>Event</th>
-              </tr>
-            </thead>
-            <tbody>
-              {all.map(({ start, title, group, url }, key) => (
-                <tr key={key}>
-                  <td>{start.split("T").join(" - ")}</td>
-                  <td>{group}</td>
-                  <td>
-                    <a href={url}>{title}</a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <Upcoming events={all}/>
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>
           <p>
@@ -246,12 +202,6 @@ export default () => {
       </div>
       <style jsx>
         {`
-          .upcoming {
-            margin: 40px auto 0;
-          }
-          .upcoming h1 {
-            text-align: center;
-          }
           .whatis {
             margin: 40px auto 0;
             max-width: 500px;
