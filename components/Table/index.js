@@ -4,7 +4,7 @@ export default ({children}) => {
   return (
     <div>
 
-    <style>{`
+    <style jsx>{`
       .table {
         width: 100%;
         max-width: 100%;

@@ -2,6 +2,7 @@ import { meetups } from "./meetups";
 import Head from "next/head";
 import events from "../events.json";
 import Upcoming from '../components/Upcoming'
+import ImageHeader from '../components/ImageHeader'
 
 const images = [
   "https://images.unsplash.com/photo-1526056316312-ed419ce34a05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=235a8dea6dc46624996665b953e152f6&auto=format&fit=crop&w=500&q=60",
@@ -77,35 +78,6 @@ export default () => {
         }
         `}</style>
       <style jsx>{`
-        .bg {
-          height: 80vh;
-          background-image: linear-gradient(
-              rgba(0, 0, 0, 0.45),
-              rgba(0, 0, 0, 0.65)
-            ),
-            url("https://images.unsplash.com/photo-1484568707073-c738a6fe8aaf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c210fda44e2f7bee774b9be338ea52a8&auto=format&fit=crop&w=2873&q=80");
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-attachment: scroll;
-          line-height: 80vh;
-          text-align: center;
-          color: white;
-          font-size: 0.8rem;
-        }
-        @media (min-width: 500px) {
-          .bg {
-            font-size: 1.2rem;
-          }
-        }
-        @media (min-width: 900px) {
-          .bg {
-            font-size: 2rem;
-          }
-        }
-        h1 {
-          margin: 0;
-        }
         .content {
           max-width: 1000px;
           margin: 0 auto;
@@ -155,9 +127,7 @@ export default () => {
           padding: 0 10px;
         }
       `}</style>
-      <div className="bg">
-        <h1>Copenhagen.community</h1>
-      </div>
+      <ImageHeader/>
       <div className="content">
         <div className="meetups">
           {meetups.map((meetup, key) => {
