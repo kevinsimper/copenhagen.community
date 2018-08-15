@@ -5,7 +5,8 @@ const meetups = [
     meetupslug: "copenhagenjs",
     image:
       "https://images.unsplash.com/photo-1526056316312-ed419ce34a05?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=235a8dea6dc46624996665b953e152f6&auto=format&fit=crop&w=500&q=60",
-    color: "#f2849e"
+    color: "#f9e035",
+    logo: "http://copenhagenjs.dk/static/images/cphjs.png"
   },
   {
     name: "ngCopenhagen",

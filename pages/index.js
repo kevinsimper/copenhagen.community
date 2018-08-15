@@ -68,6 +68,7 @@ export default () => {
             margin: 2rem 1.5rem 0;
           }
         }
+
         .square {
           width: 100%;
           height: 0;
@@ -81,6 +82,17 @@ export default () => {
           width: 100%;
           padding: 0 10px;
         }
+        .meetup-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 20%;
+        }
+        .meetup-image img {
+          width: 60%;
+          height: 60%;
+          display: block;
+        }
       `}</style>
       <ImageHeader />
       <div className="content">
@@ -93,14 +105,20 @@ export default () => {
                 className="meetup"
                 style={{
                   backgroundImage: `linear-gradient(
-                    ${meetup.color}ad,
-                    ${meetup.color}d9
+                    ${meetup.color}4d,
+                    ${meetup.color}8c
                   ),
                   url(${meetup.image})`
                 }}
               >
                 <div className="square">
-                  <div className="text">{meetup.name}</div>
+                  {meetup.logo ? (
+                    <div className="meetup-image">
+                      <img src={meetup.logo} />
+                    </div>
+                  ) : (
+                    <div className="text">{meetup.name}</div>
+                  )}
                 </div>
               </a>
             );
