@@ -92,6 +92,7 @@ export default () => {
           width: 60%;
           height: 60%;
           display: block;
+          border-radius: 5px;
         }
       `}</style>
       <ImageHeader />

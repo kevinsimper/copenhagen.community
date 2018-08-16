@@ -14,7 +14,8 @@ const meetups = [
     meetupslug: "ngCopenhagen",
     image:
       "https://images.unsplash.com/photo-1491596841158-6079a111f87d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d88273ee244036c8c4813ff416ca7a5&auto=format&fit=crop&w=500&q=60",
-    color: "#7ecaf6"
+    color: "#dd2034",
+    logo: "https://i.imgur.com/dQ7BN3T.png"
   },
   {
     name: "GDG",
@@ -22,7 +23,8 @@ const meetups = [
     meetupslug: "GDG-Copenhagen",
     image:
       "https://images.unsplash.com/photo-1523352054314-d33af9fdf6ef?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6a250c3192845b9c40adc7f4ac8bfd64&auto=format&fit=crop&w=500&q=60",
-    color: "#7bd0c1"
+    color: "#7bd0c1",
+    logo: "https://i.imgur.com/vQwRuVR.png"
   },
   {
     name: "GDG Cloud",
@@ -46,7 +48,8 @@ const meetups = [
     meetupslug: "aicopenhagen",
     image:
       "https://images.unsplash.com/photo-1467627003363-f047333cbf44?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e32cc6ee7556cbea77946138ae543ee2&auto=format&fit=crop&w=500&q=60",
-    color: "#8bc34a"
+    color: "#8bc34a",
+    logo: "https://pbs.twimg.com/profile_images/664153381364211713/nzuM7x4y_400x400.png"
   },
   {
     name: "DroidDevs CPH",
