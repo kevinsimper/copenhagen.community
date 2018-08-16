@@ -16,6 +16,7 @@ export default () => {
           name="google-site-verification"
           content="9JC3L_rBtJ6beLFcSH0RlAN2XUL48JknUcS09uvGEWU"
         />
+        <title>Copenhagen.Community</title>
       </Head>
       <style>{`
         html,
