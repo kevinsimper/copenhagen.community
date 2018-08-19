@@ -68,6 +68,14 @@ const meetups = [
     color: "#ffc107"
   },
   {
+    name: "Copenhagen React Meetup",
+    url: "https://www.meetup.com/Copenhagen-React-Meetup/",
+    meetupslug: "Copenhagen-React-Meetup",
+    image:
+      "https://images.unsplash.com/photo-1486623021874-2d24a5b1e148?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b8c6c32fc45e7b5a7ce492b4f4d4e19&auto=format&fit=crop&w=500&q=60",
+    color: "#61dafb"
+  },
+  {
     name: "Copenhagen Ruby Brigade",
     url: "https://www.meetup.com/Copenhagen-Ruby-Brigade/",
     meetupslug: "Copenhagen-Ruby-Brigade",
