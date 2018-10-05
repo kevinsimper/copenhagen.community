@@ -1,7 +1,7 @@
-import { meetups } from "./meetups";
-import Head from "next/head";
-import Upcoming from "../components/Upcoming";
-import ImageHeader from "../components/ImageHeader";
+import { meetups } from './meetups';
+import Head from 'next/head';
+import Upcoming from '../components/Upcoming';
+import ImageHeader from '../components/ImageHeader';
 
 export default () => {
   return (
@@ -110,9 +110,8 @@ export default () => {
                     ${meetup.color}4d,
                     ${meetup.color}8c
                   ),
-                  url(${meetup.image})`
-                }}
-              >
+                  url(${meetup.image})`,
+                }}>
                 <div className="square">
                   {meetup.logo ? (
                     <div className="meetup-image">

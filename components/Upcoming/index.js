@@ -1,21 +1,21 @@
-import React from "react";
-import Table from "../Table";
+import React from 'react';
+import Table from '../Table';
 
 class FetchEvents extends React.Component {
   constructor() {
     super();
     this.state = {
       loading: true,
-      eventsData: []
+      eventsData: [],
     };
   }
   componentDidMount() {
-    fetch("https://cphcomevents.storage.googleapis.com/events.json")
+    fetch('https://cphcomevents.storage.googleapis.com/events.json')
       .then(r => r.json())
       .then(data => {
         this.setState({
           eventsData: data,
-          loading: false
+          loading: false,
         });
       });
   }
@@ -76,7 +76,7 @@ export default ({ events }) => {
             render={filtered => {
               return filtered.map(({ start, title, group, url }, key) => (
                 <tr key={key}>
-                  <td>{start.split("T").join(" - ")}</td>
+                  <td>{start.split('T').join(' - ')}</td>
                   <td>{group}</td>
                   <td>
                     <a href={url}>{title}</a>

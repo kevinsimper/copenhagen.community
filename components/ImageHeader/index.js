@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default () => {
   return (
@@ -13,7 +13,7 @@ export default () => {
               rgba(0, 0, 0, 0.45),
               rgba(0, 0, 0, 0.65)
             ),
-            url("https://images.unsplash.com/photo-1484568707073-c738a6fe8aaf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c210fda44e2f7bee774b9be338ea52a8&auto=format&fit=crop&w=2873&q=80");
+            url('https://images.unsplash.com/photo-1484568707073-c738a6fe8aaf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c210fda44e2f7bee774b9be338ea52a8&auto=format&fit=crop&w=2873&q=80');
           background-position: center center;
           background-repeat: no-repeat;
           background-size: cover;
