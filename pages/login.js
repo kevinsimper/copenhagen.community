@@ -2,8 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import Content from '../components/Content';
-import '@material/react-button/dist/button.css';
 import Button from '@material/react-button';
+import '@material/react-button/dist/button.css';
+import TextField, { HelperText, Input } from '@material/react-text-field';
+import '@material/react-text-field/dist/text-field.css';
 
 export default class Login extends React.Component {
   constructor() {
@@ -32,25 +34,24 @@ export default class Login extends React.Component {
       console.log(res);
     });
   }
-  onChangeEmail(e) {
-    this.setState({
-      email: e.target.value,
-    });
-  }
   render() {
     return (
       <Layout>
         <Content>
           <h1>Login</h1>
-          <label>
-            Email:
-            <input
+          <TextField
+            label="Email"
+            style={{ maxWidth: 360, width: '100%' }}
+            helperText={
+              <HelperText>What email do you want to login with?</HelperText>
+            }>
+            <Input
               type="email"
-              name="email"
-              value={this.state.value}
-              onChange={e => this.onChangeEmail(e)}
+              style={{ maxWidth: 360, width: '100%' }}
+              value={this.state.email}
+              onChange={e => this.setState({ email: e.target.value })}
             />
-          </label>
+          </TextField>
           <div>
             <Button unelevated onClick={() => this.handleLogin()}>
               Login
