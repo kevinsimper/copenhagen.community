@@ -9,10 +9,10 @@ export default () => (
   <Layout>
     <TopAppBar
       title="Copenhagen.Community"
-      navigationIcon={
-        <MaterialIcon icon="menu" onClick={() => console.log('click')} />
-      }
-      actionItems={[<MaterialIcon key="item" icon="bookmark" />]}
+      // navigationIcon={
+      //   <MaterialIcon icon="menu" onClick={() => console.log('click')} />
+      // }
+      // actionItems={[<MaterialIcon key="item" icon="bookmark" />]}
     />
   </Layout>
 );
