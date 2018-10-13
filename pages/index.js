@@ -1,23 +1,12 @@
 import { meetups } from './meetups';
 import Head from 'next/head';
 import Upcoming from '../components/Upcoming';
+import Layout from '../components/Layout';
 import ImageHeader from '../components/ImageHeader';
 
 export default () => {
   return (
-    <div>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="google-site-verification"
-          content="9JC3L_rBtJ6beLFcSH0RlAN2XUL48JknUcS09uvGEWU"
-        />
-        <meta
-          name="google-site-verification"
-          content="9JC3L_rBtJ6beLFcSH0RlAN2XUL48JknUcS09uvGEWU"
-        />
-        <title>Copenhagen.Community</title>
-      </Head>
+    <Layout>
       <style>{`
         html,
         body {
@@ -152,6 +141,6 @@ export default () => {
           }
         `}
       </style>
-    </div>
+    </Layout>
   );
 };

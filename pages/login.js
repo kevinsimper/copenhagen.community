@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Layout from '../components/Layout';
 
 export default class Login extends React.Component {
   constructor() {
@@ -35,7 +36,7 @@ export default class Login extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Layout>
         <h1>Login</h1>
         <label>Email</label>
         <input
@@ -58,7 +59,7 @@ export default class Login extends React.Component {
             `,
           }}
         />
-      </div>
+      </Layout>
     );
   }
 }
