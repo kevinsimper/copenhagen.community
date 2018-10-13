@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import Content from '../components/Content';
+import '@material/react-button/dist/button.css';
+import Button from '@material/react-button';
 
 export default class Login extends React.Component {
   constructor() {
@@ -50,7 +52,9 @@ export default class Login extends React.Component {
             />
           </label>
           <div>
-            <button onClick={() => this.handleLogin()}>Login</button>
+            <Button unelevated onClick={() => this.handleLogin()}>
+              Login
+            </Button>
           </div>
         </Content>
         <Head>
