@@ -3,16 +3,12 @@ import Head from 'next/head';
 import Upcoming from '../components/Upcoming';
 import Layout from '../components/Layout';
 import ImageHeader from '../components/ImageHeader';
+import Content from '../components/Content';
 
 export default () => {
   return (
     <Layout>
       <style jsx>{`
-        .content {
-          max-width: 1000px;
-          margin: 0 auto;
-          padding: 20px;
-        }
         .meetups {
           display: flex;
           flex-wrap: wrap;
@@ -71,7 +67,7 @@ export default () => {
         }
       `}</style>
       <ImageHeader />
-      <div className="content">
+      <Content>
         <div className="meetups">
           {meetups.map((meetup, key) => {
             return (
@@ -117,7 +113,7 @@ export default () => {
             </a>
           </p>
         </div>
-      </div>
+      </Content>
       <style jsx>
         {`
           .whatis {

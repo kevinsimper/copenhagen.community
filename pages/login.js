@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Content from '../components/Content';
 
 export default class Login extends React.Component {
   constructor() {
@@ -37,17 +38,21 @@ export default class Login extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>Login</h1>
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          value={this.state.value}
-          onChange={e => this.onChangeEmail(e)}
-        />
-        <div>
-          <button onClick={() => this.handleLogin()}>Login</button>
-        </div>
+        <Content>
+          <h1>Login</h1>
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              value={this.state.value}
+              onChange={e => this.onChangeEmail(e)}
+            />
+          </label>
+          <div>
+            <button onClick={() => this.handleLogin()}>Login</button>
+          </div>
+        </Content>
         <Head>
           <script src="https://sdk.accountkit.com/en_US/sdk.js" />
         </Head>
