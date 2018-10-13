@@ -7,21 +7,6 @@ import ImageHeader from '../components/ImageHeader';
 export default () => {
   return (
     <Layout>
-      <style>{`
-        html,
-        body {
-          color: #585858;
-          margin: 0;
-          font-family: sans-serif;
-          line-height: 1.75;
-        }
-        *, *:before, *:after {
-          box-sizing: border-box;
-        }
-        table {
-            border-collapse: collapse;
-        }
-        `}</style>
       <style jsx>{`
         .content {
           max-width: 1000px;
