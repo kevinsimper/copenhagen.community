@@ -10,6 +10,7 @@ export default ({ children }) => (
         margin: 0;
         font-family: sans-serif;
         line-height: 1.75;
+        --mdc-theme-primary: black;
       }
       *, *:before, *:after {
         box-sizing: border-box;
@@ -19,6 +20,10 @@ export default ({ children }) => (
       }
       `}</style>
     <Head>
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Copenhagen.Community</title>
     </Head>
