@@ -5,6 +5,7 @@ module.exports = withCSS({
     return {
       '/': { page: '/' },
       '/login': { page: '/login' },
+      '/dashboard': { page: '/dashboard' },
     };
   },
 });
