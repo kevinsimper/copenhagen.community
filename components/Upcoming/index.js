@@ -22,8 +22,7 @@ class FetchEvents extends React.Component {
   parseIcal(data) {
     return data
       .map(d => {
-        return d[1][2].slice(1).map(event => {
-          // console.log(event);
+        return d[1][2].map(event => {
           const start = event[1][1][3];
           const end = event[1][2][3];
           const title = event[1][4][3];
@@ -41,7 +40,11 @@ class FetchEvents extends React.Component {
   }
   render() {
     if (this.state.loading) {
-      return <div>Loading...</div>;
+      return (
+        <tr>
+          <td>Loading...</td>
+        </tr>
+      );
     }
     const { render } = this.props;
     let filtered = this.sortByTime(this.parseIcal(this.state.eventsData));
