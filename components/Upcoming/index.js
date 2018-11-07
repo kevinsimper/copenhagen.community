@@ -22,7 +22,7 @@ class FetchEvents extends React.Component {
   parseIcal(data) {
     return data
       .map(d => {
-        return d[1][2].map(event => {
+        return d[1][2].filter(e => e[0] === 'vevent').map(event => {
           const start = event[1][1][3];
           const end = event[1][2][3];
           const title = event[1][4][3];
