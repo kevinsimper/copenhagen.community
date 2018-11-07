@@ -1,13 +1,12 @@
-const { meetups } = require("./pages/meetups");
-const got = require("got");
-const icalparser = require("ical.js");
+const { meetups } = require('./pages/meetups');
+const got = require('got');
+const icalparser = require('ical.js');
 let responses = [];
 
 (async () => {
-  const icals = meetups.filter(m => m.meetupslug !== "").map(m => [
-    m.name,
-    `https://www.meetup.com/${m.meetupslug}/events/ical/`
-  ]);
+  const icals = meetups
+    .filter(m => m.meetupslug !== '')
+    .map(m => [m.name, `https://www.meetup.com/${m.meetupslug}/events/ical/`]);
   try {
     for (const ical of icals) {
       const response = await got(ical[1]);
