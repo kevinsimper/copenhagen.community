@@ -68,6 +68,7 @@ export default () => {
       `}</style>
       <ImageHeader />
       <Content>
+        <Upcoming />
         <div className="meetups">
           {meetups.map((meetup, key) => {
             return (
@@ -95,7 +96,6 @@ export default () => {
             );
           })}
         </div>
-        <Upcoming />
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>
           <p>
