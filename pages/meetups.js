@@ -35,14 +35,6 @@ const meetups = [
     color: '#c75b9b',
   },
   {
-    name: 'Docker Copenhagen',
-    url: 'https://www.meetup.com/Docker-Copenhagen/',
-    meetupslug: 'Docker-Copenhagen',
-    image:
-      'https://images.unsplash.com/photo-1515838574152-6d83f6064351?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0afc73577781479d65292c6eef5190a0&auto=format&fit=crop&w=500&q=60',
-    color: '#ae85ca',
-  },
-  {
     name: 'AI Copenhagen',
     url: 'https://www.meetup.com/aicopenhagen/',
     meetupslug: 'aicopenhagen',
@@ -51,14 +43,6 @@ const meetups = [
     color: '#8bc34a',
     logo:
       'https://pbs.twimg.com/profile_images/664153381364211713/nzuM7x4y_400x400.png',
-  },
-  {
-    name: 'DroidDevs CPH',
-    url: 'https://www.meetup.com/DroidDevs-CPH/',
-    meetupslug: 'DroidDevs-CPH',
-    image:
-      'https://images.unsplash.com/photo-1524555197196-a7ef01c3c9d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a0a76e469be273a15f17ba96c225909&auto=format&fit=crop&w=500&q=60',
-    color: '#ff5722',
   },
   {
     name: 'React Native CPH',
@@ -107,6 +91,14 @@ const meetups = [
     image:
       'https://images.unsplash.com/photo-1499689496495-5bdf4421b725?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ec9ff7da4a4f5e788843453112f2fcd&auto=format&fit=crop&w=500&q=60',
     color: '#607d8b',
+  },
+  {
+    name: 'Women Techmakers copenhagen',
+    url: 'https://www.meetup.com/wtm-copenhagen/',
+    meetupslug: 'wtm-copenhagen',
+    image:
+      'https://images.unsplash.com/photo-1524555197196-a7ef01c3c9d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a0a76e469be273a15f17ba96c225909&auto=format&fit=crop&w=500&q=60',
+    color: '#ff5722',
   },
 ];
 exports.meetups = meetups;
