@@ -86,7 +86,7 @@ const meetups = [
   },
   {
     name: 'CPH Tech Books & Film',
-    url: 'https://www.facebook.com/groups/1967244536931015/',
+    url: 'https://www.facebook.com/Tech-Science-Book-Club-977800252424651/',
     meetupslug: '',
     image:
       'https://images.unsplash.com/photo-1499689496495-5bdf4421b725?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ec9ff7da4a4f5e788843453112f2fcd&auto=format&fit=crop&w=500&q=60',
