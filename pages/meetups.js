@@ -69,6 +69,14 @@ const meetups = [
     color: '#61dafb',
   },
   {
+    name: 'Copenhagen SEO Meetup',
+    url: 'https://www.meetup.com/copenhagen-seo-meetup/',
+    meetupslug: 'Copenhagen-SEO-Meetup',
+    image:
+      'https://images.unsplash.com/photo-1474899420076-a61e74989430?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    color: '#009688',
+  },
+  {
     name: 'Copenhagen Ruby Brigade',
     url: 'https://www.meetup.com/Copenhagen-Ruby-Brigade/',
     meetupslug: 'Copenhagen-Ruby-Brigade',
