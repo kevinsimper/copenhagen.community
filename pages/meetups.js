@@ -28,8 +28,8 @@ const meetups = [
   },
   {
     name: 'GDG Cloud',
-    url: 'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/',
-    meetupslug: 'Google-Cloud-Developer-Community-Copenhagen',
+    url: 'https://www.meetup.com/gdg-cloud-copenhagen/',
+    meetupslug: 'gdg-cloud-copenhagen',
     image:
       'https://images.unsplash.com/photo-1519143587129-d7ae992bc44c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=41cb269cddd7dbd66a0b85266f65a5c2&auto=format&fit=crop&w=500&q=60',
     color: '#c75b9b',
