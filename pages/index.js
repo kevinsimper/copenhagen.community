@@ -70,31 +70,33 @@ export default () => {
       <Content>
         <Upcoming />
         <div className="meetups">
-          {meetups.map((meetup, key) => {
-            return (
-              <a
-                href={meetup.url}
-                key={key}
-                className="meetup"
-                style={{
-                  backgroundImage: `linear-gradient(
+          {meetups
+            .filter(meetup => meetup.active !== false)
+            .map((meetup, key) => {
+              return (
+                <a
+                  href={meetup.url}
+                  key={key}
+                  className="meetup"
+                  style={{
+                    backgroundImage: `linear-gradient(
                     ${meetup.color}4d,
                     ${meetup.color}8c
                   ),
                   url(${meetup.image})`,
-                }}>
-                <div className="square">
-                  {meetup.logo ? (
-                    <div className="meetup-image">
-                      <img src={meetup.logo} />
-                    </div>
-                  ) : (
-                    <div className="text">{meetup.name}</div>
-                  )}
-                </div>
-              </a>
-            );
-          })}
+                  }}>
+                  <div className="square">
+                    {meetup.logo ? (
+                      <div className="meetup-image">
+                        <img src={meetup.logo} />
+                      </div>
+                    ) : (
+                      <div className="text">{meetup.name}</div>
+                    )}
+                  </div>
+                </a>
+              );
+            })}
         </div>
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>

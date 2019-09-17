@@ -25,6 +25,7 @@ const meetups = [
       'https://images.unsplash.com/photo-1523352054314-d33af9fdf6ef?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6a250c3192845b9c40adc7f4ac8bfd64&auto=format&fit=crop&w=500&q=60',
     color: '#7bd0c1',
     logo: 'https://i.imgur.com/vQwRuVR.png',
+    active: false,
   },
   {
     name: 'GDG Cloud',
@@ -51,6 +52,7 @@ const meetups = [
     image:
       'https://images.unsplash.com/photo-1515749968044-d1d417bf629c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ba0724278aad6ee5e0e68f58c3178c7&auto=format&fit=crop&w=500&q=60',
     color: '#ffc107',
+    active: false,
   },
   {
     name: 'Copenhagen React Meetup',
@@ -67,6 +69,7 @@ const meetups = [
     image:
       'https://images.unsplash.com/photo-1516178761885-7ecb13b39255?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=128705fb70446e0953f8e647273c917b&auto=format&fit=crop&w=500&q=60',
     color: '#61dafb',
+    active: false,
   },
   {
     name: 'Copenhagen Ruby Brigade',
