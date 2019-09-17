@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gcloud functions deploy fetchevents --entry-point index --runtime nodejs8 --region europe-west1 --trigger-http --env-vars-file .env.yaml"
+    "deploy": "cp ../../data/meetups.js . && gcloud functions deploy fetchevents --entry-point index --runtime nodejs8 --region europe-west1 --trigger-http --env-vars-file .env.yaml"
   },
   "keywords": [],
   "author": "",
