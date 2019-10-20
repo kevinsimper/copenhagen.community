@@ -16,6 +16,7 @@ const meetups = [
       'https://images.unsplash.com/photo-1491596841158-6079a111f87d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d88273ee244036c8c4813ff416ca7a5&auto=format&fit=crop&w=500&q=60',
     color: '#dd2034',
     logo: 'https://i.imgur.com/dQ7BN3T.png',
+    active: false,
   },
   {
     name: 'GDG',
@@ -25,7 +26,6 @@ const meetups = [
       'https://images.unsplash.com/photo-1523352054314-d33af9fdf6ef?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6a250c3192845b9c40adc7f4ac8bfd64&auto=format&fit=crop&w=500&q=60',
     color: '#7bd0c1',
     logo: 'https://i.imgur.com/vQwRuVR.png',
-    active: false,
   },
   {
     name: 'GDG Cloud',
@@ -61,6 +61,7 @@ const meetups = [
     image:
       'https://images.unsplash.com/photo-1486623021874-2d24a5b1e148?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b8c6c32fc45e7b5a7ce492b4f4d4e19&auto=format&fit=crop&w=500&q=60',
     color: '#61dafb',
+    active: false,
   },
   {
     name: 'ReasonML CPH',
@@ -89,8 +90,8 @@ const meetups = [
   },
   {
     name: 'CPH Tech Books & Film',
-    url: 'https://www.facebook.com/Tech-Science-Book-Club-977800252424651/',
-    meetupslug: '',
+    url: 'https://www.meetup.com/CPH-Tech-Books-Film/',
+    meetupslug: 'CPH-Tech-Books-Film',
     image:
       'https://images.unsplash.com/photo-1499689496495-5bdf4421b725?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ec9ff7da4a4f5e788843453112f2fcd&auto=format&fit=crop&w=500&q=60',
     color: '#607d8b',
