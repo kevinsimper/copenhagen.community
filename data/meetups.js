@@ -103,5 +103,13 @@ const meetups = [
       'https://images.unsplash.com/photo-1524555197196-a7ef01c3c9d9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1a0a76e469be273a15f17ba96c225909&auto=format&fit=crop&w=500&q=60',
     color: '#ff5722',
   },
+  {
+    name: 'Copenhagen SEO Meetup',
+    url: 'https://www.meetup.com/copenhagen-seo-meetup/',
+    meetupslug: 'Copenhagen-SEO-Meetup',
+    image:
+      'https://images.unsplash.com/photo-1474899420076-a61e74989430?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    color: '#009688',
+  },
 ];
 exports.meetups = meetups;
