@@ -112,5 +112,13 @@ const meetups = [
       'https://images.unsplash.com/photo-1474899420076-a61e74989430?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     color: '#009688',
   },
+  {
+    name: 'Laravel CPH Meetup',
+    url: 'https://www.meetup.com/laravel-cph/',
+    meetupslug: 'laravel-cph',
+    image: 'https://images.unsplash.com/photo-1551651781-ed763439ef5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    logo: 'http://images.pooyan.info/meetups/laravel-cph/laravel-cph-logo.png',
+    color: '#f7503d',
+  },
 ];
 exports.meetups = meetups;
