@@ -116,7 +116,7 @@ const meetups = [
     name: 'Laravel CPH Meetup',
     url: 'https://www.meetup.com/laravel-cph/',
     meetupslug: 'laravel-cph',
-    image: 'http://images.pooyan.info/meetups/laravel-cph/laravel-cph-bg.png',
+    image: 'https://images.unsplash.com/photo-1551651781-ed763439ef5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     logo: 'http://images.pooyan.info/meetups/laravel-cph/laravel-cph-logo.png',
     color: '#f7503d',
   },
