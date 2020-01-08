@@ -125,7 +125,7 @@ const meetups = [
     url: 'https://www.meetup.com/Copenhagen-GraphQL-Meetup-Group/',
     meetupslug: 'Copenhagen-GraphQL-Meetup-Group',
     image: 'https://secure.meetupstatic.com/photos/event/d/4/5/600_486663397.jpeg',
-    logo: 'https://secure.meetupstatic.com/photos/event/d/4/d/thumb_486663405.jpeg',
+    logo: 'https://secure.meetupstatic.com/photos/event/d/4/d/600_486663405.jpeg',
     color: '#E535AB',
   },  
 ];
