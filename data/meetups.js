@@ -16,7 +16,7 @@ const meetups = [
       'https://images.unsplash.com/photo-1491596841158-6079a111f87d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d88273ee244036c8c4813ff416ca7a5&auto=format&fit=crop&w=500&q=60',
     color: '#dd2034',
     logo: 'https://i.imgur.com/dQ7BN3T.png',
-    active: false,
+    active: true,
   },
   {
     name: 'GDG',
@@ -44,6 +44,7 @@ const meetups = [
     color: '#8bc34a',
     logo:
       'https://pbs.twimg.com/profile_images/664153381364211713/nzuM7x4y_400x400.png',
+    active: false,
   },
   {
     name: 'React Native CPH',
@@ -61,7 +62,7 @@ const meetups = [
     image:
       'https://images.unsplash.com/photo-1486623021874-2d24a5b1e148?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b8c6c32fc45e7b5a7ce492b4f4d4e19&auto=format&fit=crop&w=500&q=60',
     color: '#61dafb',
-    active: false,
+    active: true,
   },
   {
     name: 'ReasonML CPH',
@@ -116,7 +117,8 @@ const meetups = [
     name: 'Laravel CPH Meetup',
     url: 'https://www.meetup.com/laravel-cph/',
     meetupslug: 'laravel-cph',
-    image: 'https://images.unsplash.com/photo-1551651781-ed763439ef5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    image:
+      'https://images.unsplash.com/photo-1551651781-ed763439ef5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     logo: 'http://images.pooyan.info/meetups/laravel-cph/laravel-cph-logo.png',
     color: '#f7503d',
   },
@@ -124,9 +126,11 @@ const meetups = [
     name: 'GraphQL Copenhagen',
     url: 'https://www.meetup.com/Copenhagen-GraphQL-Meetup-Group/',
     meetupslug: 'Copenhagen-GraphQL-Meetup-Group',
-    image: 'https://secure.meetupstatic.com/photos/event/d/4/5/600_486663397.jpeg',
-    logo: 'https://secure.meetupstatic.com/photos/event/d/4/d/600_486663405.jpeg',
+    image:
+      'https://secure.meetupstatic.com/photos/event/d/4/5/600_486663397.jpeg',
+    logo:
+      'https://secure.meetupstatic.com/photos/event/d/4/d/600_486663405.jpeg',
     color: '#E535AB',
-  },  
+  },
 ];
 exports.meetups = meetups;
