@@ -1,4 +1,4 @@
-import { meetups } from '../data/meetups';
+import { meetups } from '../../data/meetups';
 import Head from 'next/head';
 import Upcoming from '../components/Upcoming';
 import Layout from '../components/Layout';
