@@ -1,11 +1,21 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import gql from 'graphql-tag';
+import { meetups } from '../../data/meetups';
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
+  type Group {
+    name: String
+    url: String
+    meetupslug: String
+    image: String
+    logo: String
+    color: String
+  }
   type Query {
     hello: String
+    groups: [Group]
   }
 `;
 
@@ -13,6 +23,9 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello: () => 'Hello world!',
+    groups: () => {
+      return meetups;
+    },
   },
 };
 
