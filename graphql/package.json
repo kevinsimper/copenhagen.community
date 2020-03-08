@@ -1,5 +1,5 @@
 {
-  "name": "graphql",
+  "name": "graphql-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,12 +11,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
+    "apollo-server-express": "^2.11.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
-    "typescript": "^3.8.3"
+    "graphql": "^14.6.0"
   },
   "devDependencies": {
-    "@types/node": "^13.9.0"
+    "@types/node": "^13.9.0",
+    "typescript": "^3.8.3"
   }
 }
