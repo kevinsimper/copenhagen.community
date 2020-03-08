@@ -1,0 +1,25 @@
+{
+  "name": "graphql-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm dist/index.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.11.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "graphql": "^14.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.0",
+    "typescript": "^3.8.3"
+  }
+}
