@@ -1,4 +1,4 @@
-import { meetups } from '../../data/meetups';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Upcoming from '../components/Upcoming';
 import Layout from '../components/Layout';
@@ -6,6 +6,22 @@ import ImageHeader from '../components/ImageHeader';
 import Content from '../components/Content';
 
 export default () => {
+  const [groups, setGroups] = useState([]);
+  useEffect(() => {
+    fetch('https://cphcomgraphql-xevahmjeya-ew.a.run.app/graphql', {
+      headers: {
+        'content-type': 'application/json',
+      },
+      body:
+        '{"operationName":null,"variables":{},"query":"{\\n  groups {\\n    name\\n    url\\n    meetupslug\\n    image\\n    logo\\n    color\\n  }\\n}\\n"}',
+      method: 'POST',
+    })
+      .then(r => r.json())
+      .then(data => {
+        setGroups(data.data.groups);
+      });
+  }, []);
+
   return (
     <Layout>
       <style jsx>{`
@@ -70,33 +86,31 @@ export default () => {
       <Content>
         <Upcoming />
         <div className="meetups">
-          {meetups
-            .filter(meetup => meetup.active !== false)
-            .map((meetup, key) => {
-              return (
-                <a
-                  href={meetup.url}
-                  key={key}
-                  className="meetup"
-                  style={{
-                    backgroundImage: `linear-gradient(
+          {groups.map((meetup, key) => {
+            return (
+              <a
+                href={meetup.url}
+                key={key}
+                className="meetup"
+                style={{
+                  backgroundImage: `linear-gradient(
                     ${meetup.color}4d,
                     ${meetup.color}8c
                   ),
                   url(${meetup.image})`,
-                  }}>
-                  <div className="square">
-                    {meetup.logo ? (
-                      <div className="meetup-image">
-                        <img src={meetup.logo} />
-                      </div>
-                    ) : (
-                      <div className="text">{meetup.name}</div>
-                    )}
-                  </div>
-                </a>
-              );
-            })}
+                }}>
+                <div className="square">
+                  {meetup.logo ? (
+                    <div className="meetup-image">
+                      <img src={meetup.logo} />
+                    </div>
+                  ) : (
+                    <div className="text">{meetup.name}</div>
+                  )}
+                </div>
+              </a>
+            );
+          })}
         </div>
         <div className="whatis">
           <h2>What is copenhagen.community?</h2>
