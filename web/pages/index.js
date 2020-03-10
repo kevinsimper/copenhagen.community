@@ -12,8 +12,21 @@ export default () => {
       headers: {
         'content-type': 'application/json',
       },
-      body:
-        '{"operationName":null,"variables":{},"query":"{\\n  groups {\\n    name\\n    url\\n    meetupslug\\n    image\\n    logo\\n    color\\n  }\\n}\\n"}',
+      body: JSON.stringify({
+        operationName: null,
+        variables: {},
+        query: `{
+          groups {
+            name
+            url
+            meetupslug
+            image
+            logo
+            color
+          }
+        }
+      `,
+      }),
       method: 'POST',
     })
       .then(r => r.json())

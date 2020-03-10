@@ -1,60 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Table from '../Table';
 
-class FetchEvents extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      loading: true,
-      eventsData: [],
-    };
-  }
-  componentDidMount() {
-    fetch('https://cphcomevents.storage.googleapis.com/events.json')
+export default () => {
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    fetch('https://cphcomgraphql-xevahmjeya-ew.a.run.app/graphql', {
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        operationName: null,
+        variables: {},
+        query: `{
+          upcomingEvents {
+            name
+            link
+            time
+            group
+          }
+        }
+      `,
+      }),
+      method: 'POST',
+    })
       .then(r => r.json())
       .then(data => {
-        this.setState({
-          eventsData: data,
-          loading: false,
-        });
+        setEvents(data.data.upcomingEvents);
       });
-  }
-  parseIcal(data) {
-    return data
-      .map(d => {
-        return d[1][2]
-          .filter(e => e[0] === 'vevent')
-          .map(event => {
-            const start = event[1][1][3];
-            const end = event[1][2][3];
-            const title = event[1][4][3];
-            const url = event[1].find(i => i[0] === 'url')[3];
-            const group = d[0];
-            return { start, end, title, url, group };
-          });
-      })
-      .reduce((acc, val) => acc.concat(val), []);
-  }
-  sortByTime(data) {
-    return data.sort((a, b) => {
-      return new Date(a.start).getTime() - new Date(b.start).getTime();
-    });
-  }
-  render() {
-    if (this.state.loading) {
-      return (
-        <tr>
-          <td>Loading...</td>
-        </tr>
-      );
-    }
-    const { render } = this.props;
-    let filtered = this.sortByTime(this.parseIcal(this.state.eventsData));
-    return render(filtered);
-  }
-}
-
-export default ({ events }) => {
+  }, []);
   return (
     <div className="upcoming">
       <style jsx>
@@ -71,25 +44,21 @@ export default ({ events }) => {
       <Table>
         <thead>
           <tr>
-            <th>Start</th>
+            <th>Title</th>
+            <th>Time</th>
             <th>Group</th>
-            <th>Event</th>
           </tr>
         </thead>
         <tbody>
-          <FetchEvents
-            render={filtered => {
-              return filtered.map(({ start, title, group, url }, key) => (
-                <tr key={key}>
-                  <td>{start.split('T').join(' - ')}</td>
-                  <td>{group}</td>
-                  <td>
-                    <a href={url}>{title}</a>
-                  </td>
-                </tr>
-              ));
-            }}
-          />
+          {events.map(({ name, link, time, group }, key) => (
+            <tr key={key}>
+              <td>
+                <a href={link}>{name}</a>
+              </td>
+              <td>{new Date(parseInt(time)).toLocaleString()}</td>
+              <td>{group}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>
