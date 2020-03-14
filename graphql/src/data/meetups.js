@@ -129,7 +129,7 @@ const meetups = [
     image:
       'https://secure.meetupstatic.com/photos/event/d/4/5/600_486663397.jpeg',
     logo:
-      'https://secure.meetupstatic.com/photos/event/d/4/d/600_486663405.jpeg',
+      'https://secure.meetupstatic.com/photos/event/7/f/6/9/600_489092617.jpeg',
     color: '#E535AB',
   },
 ];
