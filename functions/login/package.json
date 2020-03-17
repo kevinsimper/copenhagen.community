@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "deploy": "gcloud beta functions deploy login --runtime nodejs8 --trigger-http --region europe-west1 --env-vars-file .env.yaml"
-  },
-  "dependencies": {
-    "node-fetch": "^2.2.0"
-  }
-}
